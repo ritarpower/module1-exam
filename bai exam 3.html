@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai exam 3</title>
+</head>
+<body>
+<script>
+    function findPrime(numbers) {
+        let number = [];
+        let count = 0;
+        let total = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            for (let j = 2; j <= numbers.length; j++) {
+                if (numbers[i] % j === 0) {
+                    total++;
+                }
+            }
+            if (total < 2) {
+                number.push(numbers[i]);
+                count++;
+            }
+            total = 0;
+        }
+        result = number.sort(function (a, b) {
+            return a - b;
+        });
+        document.write("Dãy số sau khi sắp xếp " + result);
+    }
+
+
+    let numbers = [7, 3, 5, 1, 4, 6, 2];
+    document.write("Dãy số ban đầu " + numbers + "<br>");
+    findPrime(numbers);
+
+</script>
+</body>
+</html>

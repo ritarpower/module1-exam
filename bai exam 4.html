@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai exam 4</title>
+</head>
+<body>
+<script>
+    class Phone {
+        constructor(code, name, brand, price) {
+            this.code = code;
+            this.name = name;
+            this.brand = brand;
+            this.price = price;
+        }
+
+        get Code() {
+            return this.code;
+        }
+
+        set Code(value) {
+            this.code = value;
+        }
+
+        get Name() {
+            return this.name;
+        }
+
+        set Name(value) {
+            this.name = value;
+        }
+
+        get Brand() {
+            return this.brand;
+        }
+
+        set Brand(value) {
+            this.brand = value;
+        }
+
+        get Price() {
+            return this.price;
+        }
+
+        set Price(value) {
+            this.price = value;
+        }
+
+        toString() {
+            return "Mã điện thoại " + this.code + "<br>" + "Tên điện thoại " + this.name + "<br>" + "Hãng điện thoại " + this.brand + "<br>" + "Giá điện thoại " + this.price;
+        }
+    }
+
+    let phone1 = new Phone("S1", "Samsung", "Samsung", 5000);
+    document.write(phone1.toString());
+</script>
+</body>
+</html>

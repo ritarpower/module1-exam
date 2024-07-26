@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai exam 1</title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    let totalOdd = 0;
+    let totalEven = 0;
+    let total;
+    do {
+        total = +prompt("Số phần tử cần nhập");
+    } while (total > 20)
+    for (let i = 1; i <= total; i++) {
+        numbers[i - 1] = +prompt("nhập vào số thứ " + i);
+    }
+    document.write("Mảng các số đã nhập là : " + numbers + "<br>");
+    document.write("Số lượng phần tử đã nhập là : " + numbers.length + "<br>");
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 === 0) {
+            totalEven += numbers[i];
+        } else {
+            totalOdd += numbers[i];
+        }
+    }
+    document.write("Tổng các số chẵn - Tổng các số lẻ có kết quả là : " + (totalEven - totalOdd));
+</script>
+</body>
+</html>
